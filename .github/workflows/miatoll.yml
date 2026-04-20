@@ -19,16 +19,16 @@ jobs:
 
       - name: Define driver and UEFI URLs
         run: |
-          echo "DRIVER_URL=https://github.com/woa-miatoll/Miatoll-Releases/releases/download/2506.83/Miatoll-Drivers-v2506.83-Desktop.7z" >> $GITHUB_ENV
-          echo "UEFI_URL=https://github.com/woa-miatoll/Miatoll-Releases/releases/download/2506.83/MIATOLL.UEFI-v2506.83.img" >> $GITHUB_ENV
-          echo "UEFI_boot_URL=https://github.com/woa-miatoll/Miatoll-Releases/releases/download/2506.83/MIATOLL.UEFI-v2506.83.img" >> $GITHUB_ENV
+          echo "DRIVER_URL=https://github.com/woa-miatoll/Miatoll-Releases/releases/download/2506.70/Miatoll-Drivers-v2506.70-Desktop.7z" >> $GITHUB_ENV
+          echo "UEFI_URL=https://github.com/dizaumuna/mu_aloha_platforms/releases/download/miawtoll/xiaomi-miatoll_SB.img" >> $GITHUB_ENV
+          echo "UEFI_boot_URL=https://github.com/dizaumuna/mu_aloha_platforms/releases/download/miawtoll/xiaomi-miatoll_SB.img" >> $GITHUB_ENV
 
       - name: Set build date and artifact name
         run: |
           BUILD_DATE=$(date '+%d-%b-%Y')
           echo "BUILD_DATE=$BUILD_DATE" >> $GITHUB_ENV
-          echo "ARTIFACT_NAME=miatoll-wininstaller-v2506.83-$BUILD_DATE" >> $GITHUB_ENV
-          echo "ZIP_NAME=MIATOLL_WinInstaller_V250683_${BUILD_DATE}.zip" >> $GITHUB_ENV
+          echo "ARTIFACT_NAME=miatoll-wininstaller-v2506.70-$BUILD_DATE" >> $GITHUB_ENV
+          echo "ZIP_NAME=MIATOLL_WinInstaller_V250670_${BUILD_DATE}.zip" >> $GITHUB_ENV
 
       - name: Generate wininstaller.conf
         run: |
@@ -47,6 +47,8 @@ jobs:
             "Windows 11 Enterprise LTSC 2024"
             "Windows 11 Enterprise"
             "Windows 11 Home"
+            "Windows 10 Pro"
+            "Windows 10 Home"
           )
           DEVICE_NAME="MIATOLL"
           WI_VERSION="WinInstaller_MIATOLL_R8.3.3"
