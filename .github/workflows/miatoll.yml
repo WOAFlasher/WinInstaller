@@ -20,8 +20,8 @@ jobs:
       - name: Define driver and UEFI URLs
         run: |
           echo "DRIVER_URL=https://github.com/woa-miatoll/Miatoll-Releases/releases/download/2506.70/Miatoll-Drivers-v2506.70-Desktop.7z" >> $GITHUB_ENV
-          echo "UEFI_URL=https://github.com/dizaumuna/mu_aloha_platforms/releases/download/miawtoll/xiaomi-miatoll_SB.img" >> $GITHUB_ENV
-          echo "UEFI_boot_URL=https://github.com/dizaumuna/mu_aloha_platforms/releases/download/miawtoll/xiaomi-miatoll_SB.img" >> $GITHUB_ENV
+          echo "UEFI_URL=https://github.com/woa-miatoll/Miatoll-Releases/releases/download/2506.83/MIATOLL.UEFI-v2506.70.img" >> $GITHUB_ENV
+          echo "UEFI_boot_URL=https://github.com/woa-miatoll/Miatoll-Releases/releases/download/2506.83/MIATOLL.UEFI-v2506.70.img" >> $GITHUB_ENV
 
       - name: Set build date and artifact name
         run: |
